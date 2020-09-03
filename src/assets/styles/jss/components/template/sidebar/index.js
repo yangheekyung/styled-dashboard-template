@@ -24,6 +24,9 @@ const sidebarStyle = (theme) => ({
     '&:hover' : {
       width: drawerOpenWidth
     }
+  },
+  divider : {
+    backgroundColor: 'hsla(0,0%,100%,.3)'
   }
 });
 

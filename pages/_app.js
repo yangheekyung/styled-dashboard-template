@@ -15,7 +15,7 @@ import Layout from '../src/components/template/layout';
 const MyApp = ({Component, pageProps}) => (
   <>
     <Head>
-      <title>{process.env.NEXT_PUBLIC_TITLE}</title>
+      <title>Dashboard</title>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <meta name="theme-color" content={theme.palette.primary.main} />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />

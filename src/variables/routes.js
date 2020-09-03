@@ -1,105 +1,117 @@
+import React from "react";
+import {
+  AssignmentInd,
+  AttachMoney,
+  Bookmark,
+  Build,
+  Call,
+  EventNote,
+  FilterNone,
+  LocalMovies, Settings
+} from "@material-ui/icons";
+
 const dashboardRoutes = [
   {
     title : '회원관리',
-    icon : 'AssignmentInd',
+    icon : <AssignmentInd/>,
     children : [
       {
         title : '회원조회',
-        icon : 'AssignmentInd',
+        icon : <AssignmentInd/>,
       },
       {
         title : '휴면회원조회',
-        icon : 'AssignmentInd',
+        icon : <AssignmentInd/>,
       },
       {
         title : '탈퇴회원조회',
-        icon : 'AssignmentInd',
+        icon : <AssignmentInd/>,
       }
     ]
   },
   {
     title : '팝업관리',
-    icon : 'FilterNone',
+    icon : <FilterNone/>,
   },
   {
     title : '배너관리',
-    icon : 'Bookmark'
+    icon : <Bookmark/>,
   },
   {
     title : '이벤트관리',
-    icon : 'EventNote',
+    icon : <EventNote/>,
     children : [
       {
         title : '이벤트조회',
-        icon : 'EventNote',
+        icon : <EventNote/>,
       },
       {
         title : '응모내역조회',
-        icon : 'EventNote',
+        icon : <EventNote/>,
       },
     ]
   },
   {
     title : 'CS관리',
-    icon : 'Call',
+    icon : <Call/>,
     children: [
       {
         title : '1:1문의',
-        icon : 'Call',
+        icon : <Call/>,
       }
     ]
   },
   {
     title : '운영관리',
-    icon : 'Build',
+    icon : <Build/>,
     children: [
       {
         title : '공지사항',
-        icon : 'Build',
+        icon : <Build/>,
       },
       {
         title : 'FAQ',
-        icon : 'Build',
+        icon : <Build/>,
       },
       {
         title : '여행정보',
-        icon : 'Build',
+        icon : <Build/>,
       }
     ]
   },
   {
     title : '포인트관리',
-    icon : 'AttachMoney'
+    icon : <AttachMoney/>,
   },
   {
     title : '쿠폰관리',
-    icon : 'LocalMovies',
+    icon : <LocalMovies/>,
     children: [
       {
         title : '바우처관리',
-        icon : 'LocalMovies',
+        icon : <LocalMovies/>,
       }
     ]
   },
   {
     title : '기본설정',
-    icon : 'Settings' ,
+    icon : <Settings/>,
     children: [
       {
         title : '기본정보설정',
-        icon : 'Settings' ,
+        icon : <Settings/>,
       },
       {
         title : '관리자 비밀번호 변경',
-        icon : 'Settings' ,
+        icon : <Settings/>,
       },
       {
         title : '관리등급 권한 설정',
-        icon : 'Settings' ,
+        icon : <Settings/>,
       },
       {
         title : '약관관리',
-        icon : 'Settings' ,
+        icon : <Settings/>,
       },
     ]
   },
