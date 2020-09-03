@@ -1,13 +1,21 @@
 import React from 'react';
 import cx from 'classnames';
 import {makeStyles} from "@material-ui/core/styles";
-import {Hidden, Drawer} from "@material-ui/core";
+import {Hidden, Drawer, Divider} from "@material-ui/core";
 import style from '../../../assets/styles/jss/components/template/sidebar';
+import Brand from "./brand";
 
 const useStyles = makeStyles(style);
 
 const Sidebar = ({sidebarToggle}) => {
   const classes = useStyles();
+
+  const drawer = (
+    <div>
+      <Brand/>
+      <Divider variant={"middle"} />
+    </div>
+  )
 
   return (
     <nav>
@@ -22,7 +30,7 @@ const Sidebar = ({sidebarToggle}) => {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          a
+          {drawer}
         </Drawer>
       </Hidden>
       <Hidden xsDown implementation={`js`}>
@@ -33,14 +41,14 @@ const Sidebar = ({sidebarToggle}) => {
             [classes.drawerClose] : !sidebarToggle
           })}
           classes={{
-            paper : cx({
+            paper : cx(classes.drawerPager, {
               [classes.drawerOpen] : sidebarToggle,
               [classes.drawerClose] : !sidebarToggle,
               [classes.drawerShift] : !sidebarToggle
             })
           }}
         >
-          b
+          {drawer}
         </Drawer>
       </Hidden>
     </nav>

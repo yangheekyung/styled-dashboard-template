@@ -7,6 +7,8 @@ const sidebarStyle = (theme) => ({
   },
   drawerPager : {
     width: drawerOpenWidth,
+    backgroundColor: '#333333',
+    color: theme.palette.common.white
   },
   drawerOpen: {
     width: drawerOpenWidth,

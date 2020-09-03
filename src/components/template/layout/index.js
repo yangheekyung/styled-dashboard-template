@@ -21,14 +21,12 @@ const Layout = ({children}) => {
       <Sidebar
         sidebarToggle={sidebarToggle}
       />
-      <Header
-        sidebarToggle={sidebarToggle}
-        handleSidebarToggle={handleSidebarToggle}
-      />
       <div className={classes.mainPanel}>
-
+        <Header
+          sidebarToggle={sidebarToggle}
+          handleSidebarToggle={handleSidebarToggle}
+        />
         <main className={classes.content}>
-          <div className={classes.toolbar}/>
           {children}
         </main>
         <Footer/>
