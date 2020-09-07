@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
 import {TreeView} from "@material-ui/lab";
+import {makeStyles} from "@material-ui/core/styles";
 import {ArrowDropDown, ArrowDropUp} from "@material-ui/icons";
+import { Scrollbars } from 'react-custom-scrollbars';
 import MenuItem from "./menuItem";
 
+import style from '../../../../assets/styles/jss/components/template/sidebar/menu';
 
+const useStyles = makeStyles(style);
 
 const Index = ({routes}) => {
+  const classes = useStyles();
   const [expended, setExpended] = useState([]);
   const [selected, setSelected] = useState([]);
 
@@ -33,16 +38,21 @@ const Index = ({routes}) => {
   )
 
   return (
-    <TreeView
-      expanded={expended}
-      selected={selected}
-      onNodeToggle={handleToggle}
-      onNodeSelect={handleSelect}
-      defaultCollapseIcon={<ArrowDropUp/>}
-      defaultExpandIcon={<ArrowDropDown/>}
-    >
-      {renderItem(routes)}
-    </TreeView>
+    <Scrollbars>
+      <TreeView
+        expanded={expended}
+        selected={selected}
+        onNodeToggle={handleToggle}
+        onNodeSelect={handleSelect}
+        defaultCollapseIcon={<ArrowDropUp/>}
+        defaultExpandIcon={<ArrowDropDown/>}
+        classes={{
+          root : classes.root
+        }}
+      >
+        {renderItem(routes)}
+      </TreeView>
+    </Scrollbars>
   )
 }
 
